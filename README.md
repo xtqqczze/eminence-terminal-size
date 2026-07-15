@@ -20,10 +20,6 @@ if let Some((Width(w), Height(h))) = size {
 }
 ```
 
-## Minimum Rust Version
-
-This crate requires a minimum Rust version of 1.71.0 (2023-07-13).
-
 ## License
 
 Licensed under either of
