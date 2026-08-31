@@ -1,9 +1,7 @@
-terminal-size
-=============
+# terminal-size
 
-
-[Documentation](https://docs.rs/terminal_size)
-
+[![crates.io](https://img.shields.io/crates/v/terminal_size.svg)](https://crates.io/crates/terminal_size)
+[![docs.rs](https://docs.rs/terminal_size/badge.svg)](https://docs.rs/terminal_size)
 
 Rust library for getting the size of your terminal.
 
