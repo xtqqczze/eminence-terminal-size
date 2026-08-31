@@ -21,6 +21,7 @@ pub fn terminal_size() -> Option<(Width, Height)> {
 /// Returns the size of the terminal using the given file descriptor, if available.
 ///
 /// If the given file descriptor is not a tty, returns `None`
+#[cfg(not(any(target_os = "horizon", target_os = "vita")))]
 pub fn terminal_size_of<Fd: AsFd>(fd: Fd) -> Option<(Width, Height)> {
     use rustix::termios::{isatty, tcgetwinsize};
 
@@ -38,6 +39,11 @@ pub fn terminal_size_of<Fd: AsFd>(fd: Fd) -> Option<(Width, Height)> {
     } else {
         None
     }
+}
+
+#[cfg(any(target_os = "horizon", target_os = "vita"))]
+pub fn terminal_size_of<Fd: AsFd>(_fd: Fd) -> Option<(Width, Height)> {
+    None
 }
 
 /// Returns the size of the terminal using the given raw file descriptor, if available.
