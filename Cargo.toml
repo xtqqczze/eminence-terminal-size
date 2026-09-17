@@ -26,7 +26,7 @@ targets = [
 rustix = { version = "1.0.1", features = ["termios"] }
 
 [target.'cfg(windows)'.dependencies.windows-sys]
-version = ">=0.59, <=0.61"
+version = ">=0.52, <0.62"
 features = [
     "Win32_Foundation",
     "Win32_System_Console",
