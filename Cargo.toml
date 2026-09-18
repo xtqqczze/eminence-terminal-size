@@ -7,7 +7,7 @@ repository = "https://github.com/eminence/terminal-size"
 keywords = ["terminal", "console", "term", "size", "dimensions"]
 license = "MIT OR Apache-2.0"
 edition = "2021"
-rust-version = "1.71"
+rust-version = "1.63.0"
 
 [package.metadata.docs.rs]
 default-target = "x86_64-unknown-linux-gnu"
@@ -23,10 +23,10 @@ targets = [
 ]
 
 [target.'cfg(unix)'.dependencies]
-rustix = { version = "1.0.1", features = ["termios"] }
+rustix = { version = "1.1.2", features = ["termios"] }
 
 [target.'cfg(windows)'.dependencies.windows-sys]
-version = ">=0.59, <=0.61"
+version = ">=0.52, <0.62"
 features = [
     "Win32_Foundation",
     "Win32_System_Console",
